@@ -6,204 +6,162 @@
   <title>Sankalp Gupta | Power Electronics & Firmware Engineer</title>
   <style>
     :root {
-      --bg: #0b1020;
-      --panel: #121a30;
-      --panel-2: #18223d;
-      --text: #eef2ff;
-      --muted: #aab6d3;
-      --accent: #7dd3fc;
-      --line: #263252;
-      --chip: #1d2a49;
-      --shadow: 0 10px 30px rgba(0,0,0,0.28);
-      --max: 1080px;
+      --bg: #f4f7fb;
+      --sidebar: #0f172a;
+      --sidebar-2: #111c34;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe4f0;
+      --accent: #2563eb;
+      --chip: #eef4ff;
+      --max: 1180px;
+      --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #0a0f1d 0%, #0f1730 100%);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.55;
     }
 
-    a { color: var(--accent); text-decoration: none; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
     a:hover { text-decoration: underline; }
 
-    .container {
-      width: min(calc(100% - 32px), var(--max));
-      margin: 0 auto;
-    }
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-      background: rgba(8, 13, 28, 0.78);
-      border-bottom: 1px solid rgba(125, 211, 252, 0.12);
-    }
-
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      font-size: 0.95rem;
-    }
-
-    .hero {
-      padding: 76px 0 48px;
-    }
-
-    .hero-grid {
+    .wrapper {
+      width: min(calc(100% - 28px), var(--max));
+      margin: 28px auto;
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 28px;
-      align-items: stretch;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
     }
 
-    .card {
-      background: rgba(18, 26, 48, 0.96);
-      border: 1px solid var(--line);
-      border-radius: 20px;
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      background: linear-gradient(180deg, var(--sidebar) 0%, var(--sidebar-2) 100%);
+      color: #f8fbff;
+      border-radius: 22px;
+      padding: 28px;
       box-shadow: var(--shadow);
     }
 
-    .hero-main {
-      padding: 36px;
-    }
-
-    .eyebrow {
-      color: var(--accent);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 12px;
-    }
-
-    h1 {
+    .sidebar h1 {
       margin: 0;
-      font-size: clamp(2rem, 5vw, 3.6rem);
-      line-height: 1.08;
+      font-size: 2rem;
+      line-height: 1.1;
     }
 
-    .headline {
+    .title {
       margin-top: 12px;
-      font-size: 1.18rem;
-      color: #d7e3ff;
-      font-weight: 600;
-    }
-
-    .summary {
-      margin-top: 18px;
-      color: var(--muted);
-      max-width: 65ch;
+      color: #c7d6f5;
       font-size: 1rem;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: var(--panel-2);
-      color: var(--text);
       font-weight: 600;
     }
 
-    .btn.primary {
-      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
-      color: #08111f;
-      border: none;
+    .intro {
+      margin-top: 18px;
+      color: #d7e4fb;
+      font-size: 0.97rem;
     }
 
-    .hero-side {
-      padding: 28px;
-      display: grid;
-      gap: 16px;
-      align-content: start;
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 11px 16px;
+      border-radius: 12px;
+      background: #eff6ff;
+      color: #0f172a;
+      font-weight: 700;
     }
 
-    .stat {
-      padding: 16px;
-      border-radius: 16px;
-      background: #0f1830;
-      border: 1px solid var(--line);
+    .side-section {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.12);
     }
 
-    .stat strong {
-      display: block;
-      font-size: 1.08rem;
-      margin-bottom: 6px;
+    .side-section h2 {
+      margin: 0 0 12px;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #bfdbfe;
     }
 
-    .section {
-      padding: 18px 0 12px;
-    }
-
-    .section h2 {
-      font-size: 1.6rem;
-      margin: 0 0 18px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-    }
-
-    .panel {
-      padding: 26px;
+    .contact-item, .side-text {
+      color: #e5eefc;
+      font-size: 0.95rem;
+      margin: 8px 0;
+      word-break: break-word;
     }
 
     .chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
     }
 
     .chip {
-      background: var(--chip);
-      border: 1px solid var(--line);
-      color: #d9e5ff;
-      padding: 9px 12px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #eef4ff;
+      padding: 7px 10px;
       border-radius: 999px;
-      font-size: 0.92rem;
+      font-size: 0.86rem;
     }
 
-    .timeline-item {
-      padding: 0 0 22px;
-      margin-bottom: 22px;
+    .content {
+      display: grid;
+      gap: 20px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .hero h2 {
+      margin: 0 0 10px;
+      font-size: 1.95rem;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      font-size: 1.3rem;
+    }
+
+    .job {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
       border-bottom: 1px solid var(--line);
     }
 
-    .timeline-item:last-child {
-      border-bottom: none;
+    .job:last-child {
       margin-bottom: 0;
       padding-bottom: 0;
+      border-bottom: none;
     }
 
-    .role {
+    .job-head {
       display: flex;
       justify-content: space-between;
       gap: 14px;
@@ -211,9 +169,9 @@
       margin-bottom: 8px;
     }
 
-    .role h3 {
+    .job-head h3 {
       margin: 0;
-      font-size: 1.08rem;
+      font-size: 1.05rem;
     }
 
     .meta {
@@ -227,254 +185,227 @@
       color: var(--muted);
     }
 
-    li { margin: 8px 0; }
+    li { margin: 7px 0; }
 
-    .project-list {
+    .grid-two {
       display: grid;
-      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
-    .project {
+    .highlight {
       padding: 18px;
-      border-radius: 16px;
-      background: #0f1830;
       border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #f8fbff;
     }
 
-    .project h3 {
+    .highlight h3 {
       margin: 0 0 8px;
       font-size: 1rem;
     }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .contact-card {
-      padding: 18px;
-      border-radius: 16px;
-      background: #0f1830;
-      border: 1px solid var(--line);
-    }
-
-    footer {
-      padding: 34px 0 48px;
+    .highlight p {
+      margin: 0;
       color: var(--muted);
-      text-align: center;
-      font-size: 0.92rem;
+      font-size: 0.96rem;
     }
 
-    @media (max-width: 900px) {
-      .hero-grid, .grid-2, .contact-grid {
+    .skill-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-box {
+      background: var(--chip);
+      color: #1e3a8a;
+      border: 1px solid #dbeafe;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 920px) {
+      .wrapper {
         grid-template-columns: 1fr;
       }
-      .hero { padding-top: 48px; }
-      .hero-main, .hero-side, .panel { padding: 22px; }
+      .sidebar {
+        position: static;
+      }
+      .grid-two {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <div class="brand">Sankalp Gupta</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Highlights</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <h1>Sankalp<br>Gupta</h1>
+      <div class="title">Power Electronics & Firmware Engineer</div>
+      <p class="intro">
+        Embedded firmware engineer with 5+ years of experience in high-power electronic products, AVR microcontrollers, validation, and product development.
+      </p>
+      <a class="button" href="#">Download Resume PDF</a>
 
-  <header class="hero container">
-    <div class="hero-grid">
-      <section class="card hero-main">
-        <div class="eyebrow">Sankalp Gupta</div>
-        <h1>Power Electronics &<br>Firmware Engineer</h1>
-        <div class="headline">Embedded Firmware | AVR Microcontrollers | High-Power Systems | Product Development</div>
-        <p class="summary">
-          Results-driven Power Electronics-Firmware Engineer with 5+ years of experience developing firmware for high-power generation products. Experienced in 8-bit AVR microcontrollers, C2000 series MCU development, validation testing, hardware debugging, and end-to-end product execution.
-        </p>
-        <div class="cta-row">
-          <a class="btn primary" href="#contact">Contact Me</a>
-          <a class="btn" href="#">Download Resume PDF</a>
-          <a class="btn" href="#projects">View Highlights</a>
-        </div>
-      </section>
-
-      <aside class="card hero-side">
-        <div class="stat">
-          <strong>Location</strong>
-          Sheboygan, Wisconsin
-        </div>
-        <div class="stat">
-          <strong>Core Strengths</strong>
-          Firmware development, induction systems, validation, hardware debugging, and cross-functional product leadership.
-        </div>
-        <div class="stat">
-          <strong>Platforms & Tools</strong>
-          ATmega16U4, ATtiny806, ATmega1608, TMS320, IAR, CCS, Atmel ICE, JTAG.
-        </div>
-      </aside>
-    </div>
-  </header>
-
-  <main class="container">
-    <section id="about" class="section grid-2">
-      <div class="card panel">
-        <h2>About</h2>
-        <p style="color: var(--muted); margin-top: 0;">
-          I build embedded firmware for high-power electronic products, with a focus on practical control systems, system integration, test strategy, and real-world product performance. My work combines low-level MCU programming with hands-on debugging, data-driven validation, and collaboration across firmware, hardware, and test disciplines.
-        </p>
-        <p style="color: var(--muted); margin-bottom: 0;">
-          I am especially interested in roles where firmware, power electronics, and product development intersect, and where technical depth needs to translate into reliable shipped systems.
-        </p>
+      <div class="side-section">
+        <h2>Contact</h2>
+        <div class="contact-item">sankalp.jobs@yahoo.com</div>
+        <div class="contact-item">Sheboygan, Wisconsin</div>
+        <div class="contact-item">github.com/sankalp987</div>
+        <div class="contact-item">Add LinkedIn URL</div>
       </div>
 
-      <div id="skills" class="card panel">
-        <h2>Technical Skills</h2>
+      <div class="side-section">
+        <h2>Core Skills</h2>
         <div class="chips">
           <span class="chip">Embedded C</span>
           <span class="chip">C++</span>
           <span class="chip">Python</span>
-          <span class="chip">8-bit AVR</span>
+          <span class="chip">Power Electronics</span>
+          <span class="chip">Induction Systems</span>
+          <span class="chip">Validation</span>
+          <span class="chip">Hardware Debug</span>
+          <span class="chip">Product Development</span>
+        </div>
+      </div>
+
+      <div class="side-section">
+        <h2>Platforms</h2>
+        <div class="chips">
           <span class="chip">ATmega16U4</span>
           <span class="chip">ATtiny806</span>
           <span class="chip">ATmega1608</span>
-          <span class="chip">TMS320FX</span>
-          <span class="chip">Power Electronics</span>
-          <span class="chip">Induction Systems</span>
-          <span class="chip">IAR Embedded Workbench</span>
-          <span class="chip">Code Composer Studio</span>
+          <span class="chip">TMS320</span>
+          <span class="chip">SCR / IGBT</span>
+        </div>
+      </div>
+
+      <div class="side-section">
+        <h2>Tools</h2>
+        <div class="chips">
+          <span class="chip">IAR</span>
+          <span class="chip">CCS</span>
           <span class="chip">Microchip Studio</span>
-          <span class="chip">Altium Designer</span>
-          <span class="chip">MPLAB</span>
-          <span class="chip">JTAG</span>
+          <span class="chip">Altium</span>
           <span class="chip">Atmel ICE</span>
+          <span class="chip">JTAG</span>
           <span class="chip">Oscilloscopes</span>
           <span class="chip">Logic Analyzers</span>
-          <span class="chip">Signal Generators</span>
-          <span class="chip">Multimeters</span>
-          <span class="chip">Spectrum Analyzers</span>
-          <span class="chip">Validation Testing</span>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <section id="experience" class="section">
-      <div class="card panel">
-        <h2>Experience</h2>
+    <main class="content">
+      <section class="panel hero">
+        <h2>Building reliable firmware for high-power embedded systems.</h2>
+        <p>
+          I develop embedded firmware for induction and high-power generation products, combining low-level MCU development with hardware debugging, validation strategy, and cross-functional execution. My work focuses on turning technically demanding designs into reliable, production-ready systems.
+        </p>
+      </section>
 
-        <div class="timeline-item">
-          <div class="role">
+      <section class="panel">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="job">
+          <div class="job-head">
             <h3>The Vollrath Company — Power Electronics-Firmware Engineer</h3>
-            <div class="meta">June 2021 – Present | Sheboygan, WI</div>
+            <div class="meta">June 2021 – Present · Sheboygan, WI</div>
           </div>
           <ul>
-            <li>Led end-to-end development of a best-in-class induction product while coordinating a cross-functional team that included hardware and test support.</li>
-            <li>Developed complete firmware for SCR- and IGBT-based high-power generation products, including a unique pan-detection technique for single-switch induction cooktops.</li>
-            <li>Managed firmware projects from concept through implementation, integrating temperature control and user feedback to improve product performance.</li>
-            <li>Programmed AVR microcontrollers and TMS320-based systems using IAR and CCS for induction and resistive heating applications.</li>
-            <li>Used JTAG and Atmel ICE for debugging, troubleshooting, and hardware-level support to ensure reliable firmware operation.</li>
-            <li>Created and executed comprehensive firmware test plans using high-temperature probes and data logging for validation and analysis.</li>
+            <li>Led end-to-end development of a best-in-class induction product while coordinating firmware, hardware, and test activities.</li>
+            <li>Developed complete firmware for SCR- and IGBT-based high-power generation products.</li>
+            <li>Created a differentiated pan-detection technique for single-switch induction cooktops.</li>
+            <li>Managed firmware execution from concept through implementation, including temperature control and user feedback integration.</li>
+            <li>Programmed AVR microcontrollers and TMS320-based systems using IAR and CCS.</li>
+            <li>Used JTAG and Atmel ICE for debugging, troubleshooting, and hardware support.</li>
+            <li>Created and executed firmware test plans using probes, measurement equipment, and data logging for validation.</li>
           </ul>
         </div>
 
-        <div class="timeline-item">
-          <div class="role">
+        <div class="job">
+          <div class="job-head">
             <h3>Stonecutter Recording Studio — Audio/Electrical Engineering Intern</h3>
-            <div class="meta">May 2020 – August 2020 | Chicago, IL</div>
+            <div class="meta">May 2020 – August 2020 · Chicago, IL</div>
           </div>
           <ul>
-            <li>Collaborated on optimizing the placement of electrical and musical equipment to improve live recording sound quality.</li>
-            <li>Performed troubleshooting and quality checks on microphones, cables, connectors, and other studio electrical systems.</li>
-            <li>Worked in a hands-on technical environment emphasizing precision, teamwork, and professional execution.</li>
+            <li>Collaborated on optimizing electrical and musical equipment placement to improve live recording sound quality.</li>
+            <li>Troubleshot microphones, cables, connectors, and supporting studio electrical systems.</li>
+            <li>Worked in a precision-focused technical environment requiring strong hands-on execution.</li>
           </ul>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects" class="section grid-2">
-      <div class="card panel">
-        <h2>Career Highlights</h2>
-        <div class="project-list">
-          <div class="project">
+      <section class="panel">
+        <h2 class="section-title">Selected Highlights</h2>
+        <div class="grid-two">
+          <div class="highlight">
             <h3>Induction Product Development</h3>
-            <p style="color: var(--muted); margin-bottom: 0;">
-              Led firmware execution for an induction platform and coordinated cross-functional technical work needed to bring product concepts into practical implementation.
-            </p>
+            <p>Led firmware execution for an induction platform and helped drive concept-to-implementation technical work across disciplines.</p>
           </div>
-
-          <div class="project">
-            <h3>Patentable Pan Detection Technique</h3>
-            <p style="color: var(--muted); margin-bottom: 0;">
-              Developed a differentiated pan-detection method for single-switch induction cooktops as part of high-power firmware innovation.
-            </p>
+          <div class="highlight">
+            <h3>Pan Detection Innovation</h3>
+            <p>Developed a distinctive pan-detection method for single-switch induction cooktops as part of product differentiation.</p>
           </div>
-
-          <div class="project">
-            <h3>Validation & Debug Infrastructure</h3>
-            <p style="color: var(--muted); margin-bottom: 0;">
-              Built structured test plans and used instrumentation, probes, and logged data to validate firmware behavior and improve product confidence.
-            </p>
+          <div class="highlight">
+            <h3>Validation Infrastructure</h3>
+            <p>Built structured test plans and measurement workflows to validate firmware behavior and improve product confidence.</p>
+          </div>
+          <div class="highlight">
+            <h3>Embedded Toolchain Depth</h3>
+            <p>Worked across AVR and TMS320 platforms with low-level debugging tools and practical firmware deployment workflows.</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div id="education" class="card panel">
-        <h2>Education</h2>
-        <div class="timeline-item">
-          <div class="role">
+      <section class="panel">
+        <h2 class="section-title">Technical Areas</h2>
+        <div class="skill-boxes">
+          <span class="skill-box">Embedded Firmware</span>
+          <span class="skill-box">8-bit AVR</span>
+          <span class="skill-box">TMS320</span>
+          <span class="skill-box">Power Electronics</span>
+          <span class="skill-box">Induction Heating</span>
+          <span class="skill-box">Resistive Heating</span>
+          <span class="skill-box">Debugging</span>
+          <span class="skill-box">Validation Testing</span>
+          <span class="skill-box">System Integration</span>
+          <span class="skill-box">Hardware Bring-Up</span>
+          <span class="skill-box">Data Logging</span>
+          <span class="skill-box">Cross-Functional Leadership</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2 class="section-title">Education</h2>
+
+        <div class="job">
+          <div class="job-head">
             <h3>University of Illinois at Chicago</h3>
-            <div class="meta">M.S. in Electrical and Computer Engineering | May 2021</div>
+            <div class="meta">M.S. Electrical and Computer Engineering · May 2021</div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="role">
+
+        <div class="job">
+          <div class="job-head">
             <h3>Pune Institute of Computer Technology</h3>
-            <div class="meta">B.E. in Electronics and Telecommunication Engineering | May 2018</div>
+            <div class="meta">B.E. Electronics and Telecommunication Engineering · May 2018</div>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="role">
+
+        <div class="job">
+          <div class="job-head">
             <h3>Community Involvement</h3>
-            <div class="meta">AVRFreaks Forum and TI E2E Forums</div>
+            <div class="meta">AVRFreaks Forum · TI E2E Forums</div>
           </div>
           <ul>
-            <li>Active participant in firmware engineering communities, contributing to technical discussions and supporting other developers.</li>
-            <li>Earned over 250 points on both forums through consistent technical contributions.</li>
+            <li>Active contributor in firmware engineering communities, supporting technical discussions and peer problem-solving.</li>
+            <li>Earned over 250 points on both platforms through consistent participation.</li>
           </ul>
         </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="card panel">
-        <h2>Contact</h2>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <strong>Email</strong>
-            <p style="color: var(--muted);">sankalp.jobs@yahoo.com</p>
-          </div>
-          <div class="contact-card">
-            <strong>LinkedIn</strong>
-            <p style="color: var(--muted);">Add your LinkedIn profile URL</p>
-          </div>
-          <div class="contact-card">
-            <strong>GitHub</strong>
-            <p style="color: var(--muted);">github.com/yourusername</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © Sankalp Gupta — Power Electronics & Firmware Engineer
-  </footer>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
